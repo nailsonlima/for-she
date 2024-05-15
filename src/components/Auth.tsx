@@ -24,7 +24,7 @@ export function Auth(props: AuthProps) {
       <div className={styles.container}>
       <p><span>Send</span> a key acess</p>
 
-      <form>
+      <form onSubmit={(e) => VerifyPass(e)}>
         <input 
           type="text" 
           placeholder="pass..." 
@@ -32,8 +32,7 @@ export function Auth(props: AuthProps) {
           onChange={(e) => setInput(e.target.value)}
         />
         <button 
-         type="button"
-         onClick={(e) => VerifyPass(e)}
+         type="submit"
         >
             Enviar
         </button>
